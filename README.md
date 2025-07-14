@@ -36,14 +36,14 @@ Im Rahmen dieses Projekts wurden zwei Agenten entwickelt und trainiert:
 Der Double DQN Agent ist eine Weiterentwicklung des klassischen DQN-Algorithmus, der das Problem der Überschätzung von Q-Werten adressiert. Er verwendet zwei separate neuronale Netzwerke – ein **Online-Netzwerk** für die Aktionsauswahl und ein **Target-Netzwerk** für die Zielwertberechnung –, um ein stabileres Training zu gewährleisten. Der Agent nutzt zudem ein **Replay-Memory** für Experience Replay und eine **Epsilon-Greedy-Strategie** zur Balancierung von Exploration und Exploitation.
 
 * **Implementierung:** `DQN_LunarLander.ipynb`
-* **Trainiertes Modell:** `./Models/DQN_Model.pt`
+* **Trainiertes Modell:** `./Model/DQN_Model.pt`
 
 ### Policy Learning (PL) Agent
 
 Der Policy Learning Agent basiert auf dem  **REINFORCE-Algorithmus** , einer Form des Policy Gradient Methods. Dieser Agent lernt direkt eine Politik (d.h., die Wahrscheinlichkeitsverteilung über Aktionen), die den erwarteten kumulativen Belohnung maximiert. Der Agent sammelt Erfahrungen über eine gesamte Episode und aktualisiert seine Politik am Ende jeder Episode basierend auf den diskontierten Belohnungen.
 
 * **Implementierung:** `PL_LunarLander.ipynb`
-* **Trainiertes Modell:** `./Models/PL_Model.pt`
+* **Trainiertes Modell:** `./Model/PL_Model.pt`
 
 ## Dateistruktur
 
@@ -52,7 +52,7 @@ Der Policy Learning Agent basiert auf dem  **REINFORCE-Algorithmus** , einer For
 ├── DQN_LunarLander.ipynb
 ├── PL_LunarLander.ipynb
 ├── requirements.txt
-└── Models/
+└── Model/
     ├── DQN_Model.pt
     └── PL_Model.pt
 ```
@@ -102,7 +102,13 @@ Die detaillierte Analyse und Bewertung der Agenten, einschließlich Trainingsver
 Kurz zusammengefasst:
 
 * Der **Double DQN Agent** zeigte eine herausragende Leistung mit hoher Konsistenz und einer Erfolgsrate von über 90% beim Erreichen hoher Belohnungen.
+
+![DQN_test_flight](lunar_lander_dqn_test_flight.gif "DQN_Lunar_Lander")
+
+
 * Der **Policy Learning Agent** konnte die Aufgabe grundsätzlich lösen, zeigte jedoch eine signifikante Leistungsinkonsistenz und eine höhere Varianz in den Belohnungen.
+
+![PL_Test_flight](lunar_lander_pl_test_flight.gif)
 
 ## Autor
 
